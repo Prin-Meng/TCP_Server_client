@@ -8,7 +8,7 @@ job1:
   stage: install
   # 所需执行的脚本
   script:
-    - python3 ../nornir/nornir_config.py
+    - pip3 install -r requirements.txt
   # 指定哪个ci runner跑该工作
   tags:
     - nornir
@@ -19,7 +19,7 @@ job2:
   stage: test
   # 所需执行的脚本
   script:
-    - python3 ../nornir/nornir_config.py
+    - python3 nornir_config.py
   # 指定哪个ci runner跑该工作
   tags:
     - nornir
