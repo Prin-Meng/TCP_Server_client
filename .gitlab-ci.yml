@@ -11,4 +11,4 @@ job1:
     - python3 ../nornir/nornir_config.py
   # 指定哪个ci runner跑该工作
   tags:
-    - shell
+    - nornir
