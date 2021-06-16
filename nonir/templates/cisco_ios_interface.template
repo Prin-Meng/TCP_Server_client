@@ -1,0 +1,5 @@
+{% for i in host.interface_list %}
+    interface {{ i.interface_name }}
+          ip address {{ i.ipaddr }} {{ i.netmask }}
+          no shutdown
+{% endfor %}

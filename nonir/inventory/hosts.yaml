@@ -1,0 +1,87 @@
+csr1:
+    groups:
+        - cisco_ios
+    hostname: 192.168.0.66
+    connection_options: #  不同的connection_type相关的参数(与netmiko参数相同)，例如:cisco_asa的secret
+        netmiko:
+            extras:
+                secret: #  secret密码部分需要提前准备（enable密码，如果没有的话可以忽略）
+    data:
+        site: sichuan
+        type: router
+        router_id: 1.1.1.1
+        ospf_process_id: 1
+        interface_list:
+            -   interface_name: Loopback0
+                ipaddr: 1.1.1.1
+                netmask: 255.255.255.255
+            -   interface_name: GigabitEthernet2
+                ipaddr: 10.1.1.1
+                netmask: 255.255.255.0
+            -   interface_name: GigabitEthernet3
+                ipaddr: 172.16.0.1
+                netmask: 255.255.255.0
+        ospf_network_list:
+            -   network: 10.1.1.0
+                wildmask: 0.0.0.255
+                area: 0
+            -   network: 1.1.1.1
+                wildmask: 0.0.0.0
+                area: 0
+        domain: qytang.com
+        user_info:
+            -   username: qytadmin
+                privilege: 15
+                password: Cisc0123
+            -   username: otheradmin
+                privilege: 1
+                password: Cisc0123
+        dns_servers: 114.114.114.114 8.8.8.8
+        logging_console: notifications
+        logging_hosts:
+            -   192.168.0.166
+            -   192.168.0.188
+
+csr2:
+    groups:
+        - cisco_ios
+    hostname: 192.168.0.77
+    connection_options: #  不同的connection_type相关的参数(与netmiko参数相同)，例如:cisco_asa的secret
+        netmiko:
+            extras:
+                secret: #  secret密码部分需要提前准备
+    data:
+        site: sichuan
+        type: router
+        router_id: 2.2.2.2
+        ospf_process_id: 1
+        interface_list:
+            -   interface_name: Loopback0
+                ipaddr: 2.2.2.2
+                netmask: 255.255.255.255
+            -   interface_name: GigabitEthernet2
+                ipaddr: 10.1.1.2
+                netmask: 255.255.255.0
+            -   interface_name: GigabitEthernet3
+                ipaddr: 172.16.0.2
+                netmask: 255.255.255.0
+        ospf_network_list:
+            -   network: 10.1.1.0
+                wildmask: 0.0.0.255
+                area: 0
+            -   network: 2.2.2.2
+                wildmask: 0.0.0.0
+                area: 0
+        domain: qytang.com
+        user_info:
+            -   username: qytadmin
+                privilege: 15
+                password: Cisc0123
+            -   username: otheradmin
+                privilege: 1
+                password: Cisc0123
+        dns_servers: 114.114.114.114 8.8.8.8
+        logging_console: notifications
+        logging_hosts:
+            -   192.168.0.166
+            -   192.168.0.188

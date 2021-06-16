@@ -1,0 +1,4 @@
+ip domain name {{ host.domain }}
+{% for i in host.user_info %}
+    username {{ i.username }} privilege {{ i.privilege }} password {{ i.password }}
+{% endfor %}
