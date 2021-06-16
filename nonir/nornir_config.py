@@ -16,18 +16,6 @@ routers = nr.filter(
 # 模板目录
 templates_path = './templates/'
 
-# 从vault读取信息,并更新nornir inventory
-for host in routers.inventory.hosts.keys():
-    # 从vault读取用户名和密码
-    vault_data = client.secrets.kv.v2.read_secret_version(
-        mount_point='qytang',
-        path=f'{nr.inventory.hosts[host].platform}/cred'
-    )
-    cred_data = vault_data['data']['data']
-    nr.inventory.hosts[host].username = cred_data.get('username')
-    nr.inventory.hosts[host].password = cred_data.get('password')
-    nr.inventory.hosts[host].connection_options['netmiko'].extras['secret'] = cred_data.get('secret')
-
 
 def config_routers(task:Task) -> Result:
     # -------------------------------配置接口------------------------------

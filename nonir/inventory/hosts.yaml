@@ -2,10 +2,12 @@ csr1:
     groups:
         - cisco_ios
     hostname: 192.168.0.66
+    username: prin
+    password: Cisc0123
     connection_options: #  不同的connection_type相关的参数(与netmiko参数相同)，例如:cisco_asa的secret
         netmiko:
             extras:
-                secret: #  secret密码部分需要提前准备（enable密码，如果没有的话可以忽略）
+                secret: cisco #  secret密码部分需要提前准备（enable密码，如果没有的话可以忽略）
     data:
         site: sichuan
         type: router
