@@ -9,7 +9,7 @@ csr1:
             extras:
                 secret: cisco #  secret密码部分需要提前准备（enable密码，如果没有的话可以忽略）
     data:
-        site: sichuan
+        site: beijing
         type: router
         router_id: 1.1.1.1
         ospf_process_id: 1
@@ -55,7 +55,7 @@ csr2:
             extras:
                 secret: cisco #  secret密码部分需要提前准备
     data:
-        site: sichuan
+        site: beijing
         type: router
         router_id: 2.2.2.2
         ospf_process_id: 1
