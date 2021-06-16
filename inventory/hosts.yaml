@@ -30,7 +30,7 @@ csr1:
             -   network: 1.1.1.1
                 wildmask: 0.0.0.0
                 area: 0
-        domain: qytang.com
+        domain: cisco.com
         user_info:
             -   username: qytadmin
                 privilege: 15
@@ -76,7 +76,7 @@ csr2:
             -   network: 2.2.2.2
                 wildmask: 0.0.0.0
                 area: 0
-        domain: qytang.com
+        domain: cisco.com
         user_info:
             -   username: qytadmin
                 privilege: 15
