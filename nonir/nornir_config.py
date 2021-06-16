@@ -2,7 +2,6 @@ from nornir import InitNornir
 from nornir_netmiko.tasks import netmiko_send_command, netmiko_send_config
 from nornir_jinja2.plugins.tasks import template_file
 from nornir_utils.plugins.functions import print_result
-from vault_test.vault_1_init import client
 from nornir.core.task import Task, Result
 
 # Nornir加载配置文件
