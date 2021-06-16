@@ -1,7 +1,3 @@
-# 开始执行脚本前所需执行脚本
-before_script:
-  - bundle install
-
 # 该ci pipeline适合的场景
 stages:
   - test
