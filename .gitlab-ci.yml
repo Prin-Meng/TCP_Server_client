@@ -3,7 +3,7 @@ stages:
   - install
   - config
 
-job1-install:
+job1:
   stage: install
   # 所需执行的脚本
   script:
@@ -13,7 +13,7 @@ job1-install:
     - nornir
 
 
-job2-config:
+job2:
   stage: config
   # 所需执行的脚本
   script:
