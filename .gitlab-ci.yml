@@ -1,9 +1,9 @@
 # 该ci pipeline适合的场景
 stages:
   - install
-  - test
+  - config
 
-job1:
+job1-install:
   stage: install
   # 所需执行的脚本
   script:
@@ -13,8 +13,8 @@ job1:
     - nornir
 
 
-job2:
-  stage: test
+job2-config:
+  stage: config
   # 所需执行的脚本
   script:
     - python3 nornir_config.py
