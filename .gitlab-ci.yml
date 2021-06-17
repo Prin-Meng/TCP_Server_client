@@ -25,7 +25,7 @@ job1-master:
     - pip3 install -r requirements.txt
   # 指定哪个ci runner跑该工作
   tags:
-    - nornir_delopy
+    - nornir_deploy
 
 job2-test:
   stage: deploy
@@ -49,4 +49,4 @@ job2-master:
     - python3 nornir_config.py
   # 指定哪个ci runner跑该工作
   tags:
-    - nornir_delopy
+    - nornir_deploy
